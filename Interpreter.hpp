@@ -12,14 +12,6 @@ public:
         return expr.Visit<int>(*this);
     }
 
-    struct ZeroDivisionException : public std::exception
-    {
-        const char* what() const noexcept override
-        {
-            return "zero division";
-        }
-    };
-
     int operator()(const Integer& expr)
     {
         return expr.num;
@@ -50,7 +42,7 @@ public:
         case BinOpType::Add:
             return left + right;
             break;
-        case BinOpType::Substract:
+        case BinOpType::Subtract:
             return left - right;
             break;
         case BinOpType::Multiply:
@@ -59,9 +51,9 @@ public:
         case BinOpType::Divide:
             return left / right;
             break;
-	default:
-	    // Unreachable.
-	    break;
+        default:
+            // Unreachable.
+            break;
         }
     }
 }; // class Interpreter

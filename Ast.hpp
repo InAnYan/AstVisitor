@@ -10,7 +10,7 @@ struct Expr;
 enum class BinOpType
 {
     Add,
-    Substract,
+    Subtract,
     Multiply,
     Divide
 };
