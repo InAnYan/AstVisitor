@@ -1,8 +1,7 @@
 #include <iostream>
 #include <memory>
 
-#include "Ast.hpp"
-#include "Interpreter.hpp"
+#include "OurApproach.hpp"
 
 int main()
 {
