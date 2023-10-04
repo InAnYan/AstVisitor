@@ -24,7 +24,7 @@ struct Expr
     virtual ~Expr() = default;
     virtual void Accept(Visitor& vis) const = 0;
 
-    // Yes, if we need to change the node, we have to define a NEW method with const qualifier.
+    // Yes, if we need to change the node, we have to define a NEW method without the const qualifier.
 };
 
 // Step 4: define all AST nodes.
